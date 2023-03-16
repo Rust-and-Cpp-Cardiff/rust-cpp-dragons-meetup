@@ -1,0 +1,29 @@
+[package]
+name = "intro-async"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[workspace]
+
+[[bin]]
+name = "intro-async"
+
+# path = "src/1_minimal_async.rs"
+# path = "src/2_tokio_main.rs"
+# path = "src/3_tokio_wait_on_ports.rs"
+# path = "src/4_async_std_main.rs"
+# path = "src/5_async_std_ports.rs"
+# path = "src/6_async_std_join.rs"
+# path = "src/7_futures_main.rs"
+# path = "src/8_async_trait.rs"
+# path = "src/9_thread_scoped.rs"
+path = "src/10_tokio_scoped.rs"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+mini-redis = "0.4"
+async-std = { version = "1.6.5", features = ["attributes"] }
+futures = "0.3.2"
+async-trait = "0.1.57"

@@ -1,0 +1,1 @@
+[Useful Crates - Learning the Rust Ecosystem](https://www.youtube.com/watch?v=6TVtQwN2q0M)

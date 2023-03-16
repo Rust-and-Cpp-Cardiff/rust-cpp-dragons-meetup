@@ -1,0 +1,1 @@
+[Rust Packages, Crates and Modules & Common Collections (7-8)](https://www.youtube.com/watch?v=eV7VnNH3NfQ)

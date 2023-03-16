@@ -1,0 +1,1026 @@
+<!DOCTYPE html><html lang="en-GB"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{-webkit-tap-highlight-color:transparent;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDAgMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwIDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iNSIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{-webkit-animation-name:__bespoke_marp__!important;animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:transparent}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current next" minmax(140px,1fr) "current note" 2fr "info    note" 3em/2fr 1fr;height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:transparent;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{word-wrap:break-word;box-sizing:border-box;font-size:1.1em;height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;scrollbar-color:hsla(0,0%,93%,.5) transparent;scrollbar-width:thin;white-space:pre-wrap;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:hsla(0,0%,93%,.5);border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import url("https://fonts.googleapis.com/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap");div#p>svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}div#p>svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#p>svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */div#p>svg>foreignObject>section h1{font-size:2em;margin:0.67em 0}div#p>svg>foreignObject>section video::-webkit-media-controls{will-change:transform}@page{size:1280px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#p>svg>foreignObject>section{page-break-before:always;break-before:page}div#p>svg>foreignObject>section,div#p>svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}div#p>svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{display:block;height:auto;width:100%}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{position:static}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{content:""}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{position:relative}}div#p>svg>foreignObject>section [data-marp-fitting-svg-content]{display:table;white-space:nowrap;width:-webkit-max-content;width:-moz-max-content;width:max-content}div#p>svg>foreignObject>section [data-marp-fitting-svg-content-wrap]{white-space:pre}div#p>svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
+/*!
+ * Marp / Marpit Gaia theme.
+ *
+ * @theme gaia
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */div#p>svg>foreignObject>section .hljs{background:#000;color:#f8f8f8;display:block;overflow-x:auto;padding:.5em}div#p>svg>foreignObject>section .hljs-comment,div#p>svg>foreignObject>section .hljs-quote{color:#aeaeae;font-style:italic}div#p>svg>foreignObject>section .hljs-keyword,div#p>svg>foreignObject>section .hljs-selector-tag,div#p>svg>foreignObject>section .hljs-type{color:#e28964}div#p>svg>foreignObject>section .hljs-string{color:#65b042}div#p>svg>foreignObject>section .hljs-subst{color:#daefa3}div#p>svg>foreignObject>section .hljs-link,div#p>svg>foreignObject>section .hljs-regexp{color:#e9c062}div#p>svg>foreignObject>section .hljs-name,div#p>svg>foreignObject>section .hljs-section,div#p>svg>foreignObject>section .hljs-tag,div#p>svg>foreignObject>section .hljs-title{color:#89bdff}div#p>svg>foreignObject>section .hljs-class .hljs-title,div#p>svg>foreignObject>section .hljs-doctag{text-decoration:underline}div#p>svg>foreignObject>section .hljs-bullet,div#p>svg>foreignObject>section .hljs-number,div#p>svg>foreignObject>section .hljs-symbol{color:#3387cc}div#p>svg>foreignObject>section .hljs-params,div#p>svg>foreignObject>section .hljs-template-variable,div#p>svg>foreignObject>section .hljs-variable{color:#3e87e3}div#p>svg>foreignObject>section .hljs-attribute{color:#cda869}div#p>svg>foreignObject>section .hljs-meta{color:#8996a8}div#p>svg>foreignObject>section .hljs-formula{background-color:#0e2231;color:#f8f8f8;font-style:italic}div#p>svg>foreignObject>section .hljs-addition{background-color:#253b22;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-deletion{background-color:#420e09;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-selector-class{color:#9b703f}div#p>svg>foreignObject>section .hljs-selector-id{color:#8b98ab}div#p>svg>foreignObject>section .hljs-emphasis{font-style:italic}div#p>svg>foreignObject>section .hljs-strong{font-weight:700}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{max-height:580px}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2,div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4,div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{margin:.5em 0 0}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{font-weight:inherit}div#p>svg>foreignObject>section h1{font-size:1.8em}div#p>svg>foreignObject>section h2{font-size:1.5em}div#p>svg>foreignObject>section h3{font-size:1.3em}div#p>svg>foreignObject>section h4{font-size:1.1em}div#p>svg>foreignObject>section h5{font-size:1em}div#p>svg>foreignObject>section h6{font-size:.9em}div#p>svg>foreignObject>section blockquote,div#p>svg>foreignObject>section p{margin:1em 0 0}div#p>svg>foreignObject>section ol>li,div#p>svg>foreignObject>section ul>li{margin:.3em 0 0}div#p>svg>foreignObject>section ol>li>p,div#p>svg>foreignObject>section ul>li>p{margin:.6em 0 0}div#p>svg>foreignObject>section code{display:inline-block;font-family:Roboto Mono,monospace;font-size:.8em;letter-spacing:0;margin:-.1em .15em;padding:.1em .2em;vertical-align:baseline}div#p>svg>foreignObject>section pre{display:block;margin:1em 0 0;min-height:1em;overflow:visible}div#p>svg>foreignObject>section pre code{box-sizing:border-box;font-size:.7em;margin:0;min-width:100%;padding:.5em}div#p>svg>foreignObject>section pre code svg[data-marp-fitting=svg]{max-height:calc(580px - 1em)}div#p>svg>foreignObject>section blockquote{margin:1em 0 0;padding:0 1em;position:relative}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before{content:"“";display:block;font-family:Times New Roman,serif;font-weight:700;position:absolute}div#p>svg>foreignObject>section blockquote:before{left:0;top:0}div#p>svg>foreignObject>section blockquote:after{bottom:0;right:0;transform:rotate(180deg)}div#p>svg>foreignObject>section blockquote>:first-child{margin-top:0}div#p>svg>foreignObject>section mark{background:transparent}div#p>svg>foreignObject>section table{border-collapse:collapse;border-spacing:0;margin:1em 0 0}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{border-style:solid;border-width:1px;padding:.2em .4em}div#p>svg>foreignObject>section:after,div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{box-sizing:border-box;font-size:66%;height:70px;line-height:50px;overflow:hidden;padding:10px 25px;position:absolute}div#p>svg>foreignObject>section:after{--marpit-root-font-size:66%}div#p>svg>foreignObject>section header{top:0}div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{left:0;right:0}div#p>svg>foreignObject>section footer{bottom:0}div#p>svg>foreignObject>section{word-wrap:break-word;--color-background:#fff8e1;--color-background-stripe:rgba(69,90,100,.1);--color-foreground:#455a64;--color-dimmed:#6a7a7d;--color-highlight:#0288d1;background-color:var(--color-background);background-image:linear-gradient(135deg,hsla(0,0%,53%,0),hsla(0,0%,53%,.02) 50%,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,.05));color:var(--color-foreground);font-family:Lato,Avenir Next,Avenir,Trebuchet MS,Segoe UI,sans-serif;font-size:35px;height:720px;letter-spacing:1.25px;line-height:1.35;padding:70px;width:1280px}div#p>svg>foreignObject>section{--marpit-root-font-size:35px}div#p>svg>foreignObject>section:after{bottom:0;font-size:80%;right:0}div#p>svg>foreignObject>section:after{--marpit-root-font-size:80%}div#p>svg>foreignObject>section a,div#p>svg>foreignObject>section mark{color:var(--color-highlight)}div#p>svg>foreignObject>section code{background:var(--color-dimmed);color:var(--color-background)}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{color:var(--color-highlight)}div#p>svg>foreignObject>section pre>code{background:var(--color-foreground)}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before,div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header,div#p>svg>foreignObject>section section:after{color:var(--color-dimmed)}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{border-color:var(--color-foreground)}div#p>svg>foreignObject>section table thead th{background:var(--color-foreground);color:var(--color-background)}div#p>svg>foreignObject>section table tbody>tr:nth-child(odd) td,div#p>svg>foreignObject>section table tbody>tr:nth-child(odd) th{background:var(--color-background-stripe,transparent)}div#p>svg>foreignObject>section>:first-child,div#p>svg>foreignObject>section>header:first-child+*{margin-top:0}div#p>svg>foreignObject>section.invert{--color-background:#455a64;--color-background-stripe:rgba(255,248,225,.1);--color-foreground:#fff8e1;--color-dimmed:#dad8c8;--color-highlight:#81d4fa}div#p>svg>foreignObject>section.gaia{--color-background:#0288d1;--color-background-stripe:rgba(255,248,225,.1);--color-foreground:#fff8e1;--color-dimmed:#cce2de;--color-highlight:#81d4fa}div#p>svg>foreignObject>section.lead{display:flex;flex-flow:column nowrap;justify-content:center}div#p>svg>foreignObject>section.lead h1,div#p>svg>foreignObject>section.lead h2,div#p>svg>foreignObject>section.lead h3,div#p>svg>foreignObject>section.lead h4,div#p>svg>foreignObject>section.lead h5,div#p>svg>foreignObject>section.lead h6{text-align:center}div#p>svg>foreignObject>section.lead h1 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h2 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h3 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h4 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h5 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h6 svg[data-marp-fitting=svg]{--preserve-aspect-ratio:xMidYMid meet}div#p>svg>foreignObject>section.lead p{text-align:center}div#p>svg>foreignObject>section.lead blockquote>h1,div#p>svg>foreignObject>section.lead blockquote>h2,div#p>svg>foreignObject>section.lead blockquote>h3,div#p>svg>foreignObject>section.lead blockquote>h4,div#p>svg>foreignObject>section.lead blockquote>h5,div#p>svg>foreignObject>section.lead blockquote>h6,div#p>svg>foreignObject>section.lead blockquote>p{text-align:left}div#p>svg>foreignObject>section.lead blockquote svg[data-marp-fitting=svg]:not([data-marp-fitting-math]){--preserve-aspect-ratio:xMinYMin meet}div#p>svg>foreignObject>section.lead ol>li>p,div#p>svg>foreignObject>section.lead ul>li>p{text-align:left}div#p>svg>foreignObject>section.lead table{margin-left:auto;margin-right:auto}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="1" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/wallpaper2020.png&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="1" data-paginate="true" data-theme="gaia" data-marpit-pagination="1" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="1" data-marpit-pagination-total="96"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-class="lead invert" data-theme="gaia" class="lead invert" data-marpit-pagination="2" data-marpit-pagination-total="96" style="--paginate:true;--class:lead invert;--theme:gaia;">
+<h2>twitter: <a href="https://twitter.com/rustcpp_cardiff">@rustcpp_cardiff</a></h2>
+<h2>email: <a href="rustandcppcadiff@gmail.com">rustandcppcardiff@gmail.com</a></h2>
+<h2>discord (message on meetup for link)</h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-class="lead invert" data-theme="gaia" class="lead invert" data-marpit-pagination="3" data-marpit-pagination-total="96" style="--paginate:true;--class:lead invert;--theme:gaia;">
+<h1>Objectives</h1>
+<p>Learn and share<br />
+Introduce new people<br />
+Challenge ourselves<br />
+Real world solutions<br />
+Advance our ability</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="4" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/support3.png&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-theme="gaia" data-marpit-pagination="4" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="4" data-marpit-pagination-total="96"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="5" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h1>Conduct</h1>
+<ul>
+<li>Privacy</li>
+<li><a href="https://www.rust-lang.org/policies/code-of-conduct">Code of Conduct</a>
+<ul>
+<li>Just be wonderful</li>
+</ul>
+</li>
+<li><a href="https://www.ericholscher.com/blog/2017/aug/2/pacman-rule-conferences/">Pacman rule</a></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-class="lead invert" data-theme="gaia" class="lead invert" data-marpit-pagination="6" data-marpit-pagination-total="96" style="--paginate:true;--class:lead invert;--theme:gaia;">
+<p><img src="images/pacman.png" alt="" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-theme="gaia" data-marpit-pagination="7" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/RustBookClubLogo.png&quot;);"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-theme="gaia" data-marpit-pagination="7" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="7" data-marpit-pagination-total="96"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="8" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h4>Recap</h4>
+<ul>
+<li><strong>Chapters 1- 6:</strong> Installation, Essential Concepts, Ownership, Structs, Enums and Pattern Matching</li>
+<li><strong>Chapters 7 - 12:</strong> Packages, Crates and Modules, Vectors, Strings and Hashmaps, Error Handling, Generic Types, Traits and Lifetimes, Writing Automated Tests, and Building a Command Line Program</li>
+<li><strong>Chapters 13 - 16:</strong> Functional language features: iterators &amp; closures, more about Cargo and <a href="http://Crates.io">Crates.io</a>, Smart pointers, Fearless Concurrency</li>
+<li><strong>Chapters 17 - 18:</strong> Objective oriented programming features of Rust, and Patterns and Matching</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-class="lead" data-theme="gaia" class="lead" data-marpit-pagination="9" data-marpit-pagination-total="96" style="--paginate:true;--class:lead;--theme:gaia;">
+<h1><strong>Rust Book</strong></h1>
+<p>Chapter 19</p>
+<p><em>Advanced Features</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-theme="gaia" data-marpit-pagination="10" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h2>19. Advanced Features</h2>
+<ul>
+<li>19.1 Unsafe Rust</li>
+<li>19.2 Advanced traits</li>
+<li>19.3 Advanced types</li>
+<li>19.4 Advanced functions and closures</li>
+<li>19.5 Macros</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-class="lead" data-theme="gaia" class="lead" data-marpit-pagination="11" data-marpit-pagination-total="96" style="--paginate:true;--class:lead;--theme:gaia;">
+<h1>Unsafe Rust</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="12" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h1>Unsafe Rust</h1>
+<blockquote>
+<h3>Trust me, I know what I’m doing.</h3>
+</blockquote>
+<p>Unsafe keyword gives you access to programming features for which the compiler can't provide its usual safety guarantees.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-theme="gaia" data-marpit-pagination="13" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h1>Unsafe Rust</h1>
+<p>Usual borrow checker rules apply, but in an <code>unsafe</code> block you can also:</p>
+<ul>
+<li>Dereference a raw pointer</li>
+<li>Call another unsafe function or method</li>
+<li>Access or modify a mutable static variable</li>
+<li>Implement an unsafe trait</li>
+<li>Access fields of unions</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="14" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h2>Unsafe Rust - Raw Pointers</h2>
+<p>Unsafe rust allows you to dereference raw pointers:</p>
+<ul>
+<li><code>*const T</code></li>
+<li><code>*mut T</code></li>
+</ul>
+<p>You can create instances of these in safe code, you just can't derefernce them unless you are in an <code>unsafe</code> block</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="15" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h2>Unsafe Rust - Raw Pointers</h2>
+<p>Raw pointers are special because they:</p>
+<ul>
+<li>Can ignore reference borrowing rules:
+<ul>
+<li>So can have both immutable and mutable pointers, or multiple mutable pointers to the same location</li>
+</ul>
+</li>
+<li>Aren’t guaranteed to point to valid memory</li>
+<li>Are allowed to be null</li>
+<li>Don’t implement any automatic cleanup</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-theme="gaia" data-marpit-pagination="16" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h2>Unsafe Rust - Raw Pointers</h2>
+<h3>Why?</h3>
+<ul>
+<li>Performance</li>
+<li>Interfacing with other languages</li>
+<li>Interfacing with hardware</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-theme="gaia" data-marpit-pagination="17" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h2>Unsafe Rust - Raw Pointers</h2>
+<h3>How?</h3>
+<p>You can cast an immutable and a mutable reference into its corresponding raw pointer types</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> num = <span class="hljs-number">5</span>;
+
+<span class="hljs-keyword">let</span> r1 = &amp;num <span class="hljs-keyword">as</span> *<span class="hljs-keyword">const</span> <span class="hljs-built_in">i32</span>;
+<span class="hljs-keyword">let</span> r2 = &amp;<span class="hljs-keyword">mut</span> num <span class="hljs-keyword">as</span> *<span class="hljs-keyword">mut</span> <span class="hljs-built_in">i32</span>;
+
+<span class="hljs-keyword">unsafe</span> {
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;r1 is: {}&quot;</span>, *r1);
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;r2 is: {}&quot;</span>, *r2);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-theme="gaia" data-marpit-pagination="18" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h2>Unsafe Rust - Raw Pointers</h2>
+<p>In that case, the pointer is valid, but we can also create invalid ones which might go boom:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> address = <span class="hljs-number">0x0usize</span>;
+<span class="hljs-keyword">let</span> r = address <span class="hljs-keyword">as</span> *<span class="hljs-keyword">const</span> <span class="hljs-built_in">i32</span>;
+
+<span class="hljs-keyword">unsafe</span> {
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;r is: {}&quot;</span>, *r);
+}
+</span></span></foreignObject></svg></code></pre>
+<p><code>error: process didn't exit successfully (exit code: 0xc0000005, STATUS_ACCESS_VIOLATION)</code></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="19" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h2>Unsafe Rust - Calling an Unsafe function</h2>
+<p>A function marked <code>unsafe</code> can only be called from a <code>unsafe</code> block.</p>
+<h4>Why?</h4>
+<p>Functions marked unsafe indicating the calling code needs to be careful.</p>
+<p>Calling it using an <code>unsafe</code> block indicates to the compiler that we think we know how to use this function properly, and have convinced ourselves that we’re fulfilling the contract of the function.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-paginate="true" data-theme="gaia" data-marpit-pagination="20" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h2>Unsafe Rust - Calling an Unsafe function</h2>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">unsafe</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">use_with_caution</span></span>() {
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;Might be dangerous if used incorrectly... read the doc&quot;</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">call_at_will_i_am_safe</span></span>() {
+
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;No calling conditions required for safety...&quot;</span>);
+
+    <span class="hljs-keyword">unsafe</span> { <span class="hljs-comment">// I promise, I&#x27;m using this correctly</span>
+        use_with_caution();
+    }
+    
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-theme="gaia" data-marpit-pagination="21" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h2>Unsafe Rust - Calling an Unsafe function</h2>
+<p>Functions containing an <code>unsafe</code> block do not need to be called from within an unsafe block.</p>
+<p>Many standard library functions have unsafe code e.g. <code>split_at_mut</code> which allows you to get two mutable slices in a tuple</p>
+<p>Conceptually, the unsafe block says &quot;I promise the two slices I return won't overlap&quot;</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-paginate="true" data-theme="gaia" data-marpit-pagination="22" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h2>Unsafe Rust - Calling an Unsafe function</h2>
+<p>What we want to write, but can't:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">split_at_mut</span></span>(values: &amp;<span class="hljs-keyword">mut</span> [<span class="hljs-built_in">i32</span>], mid: <span class="hljs-built_in">usize</span>) -&gt; (&amp;<span class="hljs-keyword">mut</span> [<span class="hljs-built_in">i32</span>], &amp;<span class="hljs-keyword">mut</span> [<span class="hljs-built_in">i32</span>]) {
+    <span class="hljs-keyword">let</span> len = values.len();
+
+    <span class="hljs-built_in">assert!</span>(mid &lt;= len);
+
+    (&amp;<span class="hljs-keyword">mut</span> values[..mid], &amp;<span class="hljs-keyword">mut</span> values[mid..])
+}
+</span></span></foreignObject></svg></code></pre>
+<p><em><strong>Note:</strong> <code>assert!</code> fires in release and debug builds. This means our unsafe code is correct, but the borrow checker can't verify it</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-paginate="true" data-theme="gaia" data-marpit-pagination="23" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<pre><code class="language-rs"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>error[E0499]: cannot borrow `*values` <span class="hljs-keyword">as</span> mutable more than once at a time
+ --&gt; src/main.rs:<span class="hljs-number">6</span>:<span class="hljs-number">31</span>
+  |
+<span class="hljs-number">1</span> | <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">split_at_mut</span></span>(values: &amp;<span class="hljs-keyword">mut</span> [<span class="hljs-built_in">i32</span>], mid: <span class="hljs-built_in">usize</span>) -&gt; (&amp;<span class="hljs-keyword">mut</span> [<span class="hljs-built_in">i32</span>], &amp;<span class="hljs-keyword">mut</span> [<span class="hljs-built_in">i32</span>]) {
+  |                         - <span class="hljs-keyword">let</span><span class="hljs-symbol">&#x27;s</span> call the lifetime of this reference `&#x27;<span class="hljs-number">1</span>`
+...
+<span class="hljs-number">6</span> |     (&amp;<span class="hljs-keyword">mut</span> values[..mid], &amp;<span class="hljs-keyword">mut</span> values[mid..])
+  |     --------------------------^^^^^^--------
+  |     |     |                   |
+  |     |     |                   second mutable borrow occurs here
+  |     |     first mutable borrow occurs here
+  |     returning this value requires that `*values` is borrowed <span class="hljs-keyword">for</span> `&#x27;<span class="hljs-number">1</span>`
+
+For more information about this error, <span class="hljs-keyword">try</span> `rustc --explain E0499`.
+error: could not compile `<span class="hljs-keyword">unsafe</span>-example` due to previous error
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-paginate="true" data-theme="gaia" data-marpit-pagination="24" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h2>Unsafe Rust - Calling an Unsafe function</h2>
+<p>What we write instead:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">use</span> std::slice;
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">split_at_mut</span></span>(values: &amp;<span class="hljs-keyword">mut</span> [<span class="hljs-built_in">i32</span>], mid: <span class="hljs-built_in">usize</span>) -&gt; (&amp;<span class="hljs-keyword">mut</span> [<span class="hljs-built_in">i32</span>], &amp;<span class="hljs-keyword">mut</span> [<span class="hljs-built_in">i32</span>]) {             
+    <span class="hljs-keyword">let</span> len = values.len();
+    <span class="hljs-keyword">let</span> ptr = values.as_mut_ptr();
+
+    <span class="hljs-built_in">assert!</span>(mid &lt;= len);
+
+    <span class="hljs-keyword">unsafe</span> {
+        (
+            slice::from_raw_parts_mut(ptr, mid),
+            slice::from_raw_parts_mut(ptr.add(mid), len - mid),
+        )
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-paginate="true" data-theme="gaia" data-marpit-pagination="25" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h2>Unsafe Rust - Calling an Unsafe function</h2>
+<p>Why is this unsafe? The doc for <code>from_raw_parts_mut</code> will tell us! (or just <code>from_raw_parts</code> doc)</p>
+<p><strong><em>Unsafe functions often have the longest doc comments!!</em></strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-paginate="true" data-theme="gaia" data-marpit-pagination="26" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h3>Unsafe Rust - from_raw_parts</h3>
+<h4>The function itself</h4>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">unsafe</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">from_raw_parts</span></span>&lt;<span class="hljs-symbol">&#x27;a</span>, T&gt;(data: *<span class="hljs-keyword">const</span> T, len: <span class="hljs-built_in">usize</span>) -&gt; &amp;<span class="hljs-symbol">&#x27;a</span> [T] {
+    debug_check_data_len(data, len);
+
+    <span class="hljs-comment">// SAFETY: the caller must uphold the safety contract for `from_raw_parts`.</span>
+    <span class="hljs-keyword">unsafe</span> { &amp;*ptr::slice_from_raw_parts(data, len) }
+}
+</span></span></foreignObject></svg></code></pre>
+<p>Dereferencing a raw ptr!!</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-paginate="true" data-theme="gaia" data-marpit-pagination="27" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h3>Unsafe Rust - from_raw_parts</h3>
+<h4>What it does</h4>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">/// Forms a slice from a pointer and a length.</span>
+<span class="hljs-comment">///</span>
+<span class="hljs-comment">/// The `len` argument is the number of **elements**, not the number of bytes.</span>
+</span></span></foreignObject></svg></code></pre>
+<h4>Safety Conditions</h4>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">/// # Safety</span>
+<span class="hljs-comment">///</span>
+<span class="hljs-comment">/// Behavior is undefined if any of the following conditions are violated:</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-paginate="true" data-theme="gaia" data-marpit-pagination="28" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<p>Condition 1:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">/// * `data` must be [valid] for reads for `len * mem::size_of::&lt;T&gt;()` many bytes,</span>
+<span class="hljs-comment">///   and it must be properly aligned. This means in particular:</span>
+<span class="hljs-comment">///</span>
+<span class="hljs-comment">///     * The entire memory range of this slice must be contained within a single</span>
+<span class="hljs-comment">///       allocated object!</span>
+<span class="hljs-comment">///       Slices can never span across multiple allocated objects. </span>
+<span class="hljs-comment">///</span>
+<span class="hljs-comment">///     * `data` must be non-null and aligned even for zero-length slices. One</span>
+<span class="hljs-comment">///       reason for this is that enum layout optimizations may rely on references</span>
+<span class="hljs-comment">///       (including slices of any length) being aligned and non-null to distinguish</span>
+<span class="hljs-comment">///       them from other data. You can obtain a pointer that is usable as `data`</span>
+<span class="hljs-comment">///       for zero-length slices using [`NonNull::dangling()`].</span>
+
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-paginate="true" data-theme="gaia" data-marpit-pagination="29" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<p>Condition 2</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">/// * `data` must point to `len` consecutive properly initialized values of type `T`.</span>
+</span></span></foreignObject></svg></code></pre>
+<p>Condition 3</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">/// * The memory referenced by the returned slice must not be mutated for the duration</span>
+<span class="hljs-comment">///   of lifetime `&#x27;a`, except inside an `UnsafeCell`.</span>
+</span></span></foreignObject></svg></code></pre>
+<p>Condition 4</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">/// * The total size `len * mem::size_of::&lt;T&gt;()` of the slice must be no larger than `isize::MAX`.</span>
+<span class="hljs-comment">///   See the safety documentation of [`pointer::offset`].</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-paginate="true" data-theme="gaia" data-marpit-pagination="30" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h5>Caveat</h5>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">/// # Caveat</span>
+<span class="hljs-comment">///</span>
+<span class="hljs-comment">/// The lifetime for the returned slice is inferred from its usage. To</span>
+<span class="hljs-comment">/// prevent accidental misuse, it&#x27;s suggested to tie the lifetime to whichever</span>
+<span class="hljs-comment">/// source lifetime is safe in the context, such as by providing a helper</span>
+<span class="hljs-comment">/// function taking the lifetime of a host value for the slice, or by explicit</span>
+<span class="hljs-comment">/// annotation.</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-paginate="true" data-theme="gaia" data-marpit-pagination="31" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h4>Incorrect usage</h4>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">/// The following `join_slices` function is **unsound** <img class="emoji" draggable="false" alt="⚠" src="https://twemoji.maxcdn.com/2/svg/26a0.svg" data-marp-twemoji=""/></span>
+<span class="hljs-keyword">use</span> std::slice;
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">join_slices</span></span>&lt;<span class="hljs-symbol">&#x27;a</span>, T&gt;(fst: &amp;<span class="hljs-symbol">&#x27;a</span> [T], snd: &amp;<span class="hljs-symbol">&#x27;a</span> [T]) -&gt; &amp;<span class="hljs-symbol">&#x27;a</span> [T] {
+    <span class="hljs-keyword">let</span> fst_end = fst.as_ptr().wrapping_add(fst.len());
+    <span class="hljs-keyword">let</span> snd_start = snd.as_ptr();
+    <span class="hljs-built_in">assert_eq!</span>(fst_end, snd_start, <span class="hljs-string">&quot;Slices must be contiguous!&quot;</span>);
+    <span class="hljs-keyword">unsafe</span> {
+        <span class="hljs-comment">// The assertion above ensures `fst` and `snd` are contiguous, but they might             </span>
+        <span class="hljs-comment">// still be contained within _different allocated objects_, in which case</span>
+        <span class="hljs-comment">// creating this slice is undefined behavior.</span>
+        slice::from_raw_parts(fst.as_ptr(), fst.len() + snd.len())
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">main</span></span>() {
+    <span class="hljs-comment">// `a` and `b` are different allocated objects...</span>
+    <span class="hljs-keyword">let</span> a = <span class="hljs-number">42</span>;
+    <span class="hljs-keyword">let</span> b = <span class="hljs-number">27</span>;
+    <span class="hljs-comment">// ... which may nevertheless be laid out contiguously in memory: | a | b |</span>
+    <span class="hljs-keyword">let</span> _ = join_slices(slice::from_ref(&amp;a), slice::from_ref(&amp;b)); <span class="hljs-comment">// UB</span>
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="32" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h3>Unsafe Rust - Using <code>extern</code> Functions to Call External Code</h3>
+<ul>
+<li><code>extern</code> keyword allows you to define functions in one language and enable a different (foreign) programming language to call those functions.</li>
+</ul>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span> { <span class="hljs-comment">// The ABI of the foreign function</span>
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">abs</span></span>(input: <span class="hljs-built_in">i32</span>) -&gt; <span class="hljs-built_in">i32</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">main</span></span>() {
+    <span class="hljs-keyword">unsafe</span> {
+        <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;Absolute value of -3 according to C: {}&quot;</span>, abs(-<span class="hljs-number">3</span>));                
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-paginate="true" data-class="gaia" data-theme="gaia" class="gaia" data-marpit-pagination="33" data-marpit-pagination-total="96" style="--paginate:true;--class:gaia;--theme:gaia;">
+<h3>Python:</h3>
+<ul>
+<li>PyO3 - rust binding for Python interpreter
+<ul>
+<li><a href="https://github.com/PyO3/pyo3">https://github.com/PyO3/pyo3</a></li>
+</ul>
+</li>
+<li>Inline Python (based on PyO3)
+<ul>
+<li><a href="https://blog.m-ou.se/writing-python-inside-rust-1/">https://blog.m-ou.se/writing-python-inside-rust-1/</a></li>
+</ul>
+</li>
+<li>Compile time python (based on inline python)
+<ul>
+<li><a href="https://docs.rs/ct-python/latest/ct_python/">https://docs.rs/ct-python/latest/ct_python/</a></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-paginate="true" data-theme="gaia" data-marpit-pagination="34" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h3>Unsafe Rust - Accessing or Modifying a Mutable Static Variable</h3>
+<p><strong><em>The dreaded globallllll</em></strong></p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">static</span> HELLO_WORLD: &amp;<span class="hljs-built_in">str</span> = <span class="hljs-string">&quot;Hello, world!&quot;</span>; <span class="hljs-comment">// Implicitly using &#x27;static lifetime</span>
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">main</span></span>() {
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;name is: {}&quot;</span>, HELLO_WORLD);
+}
+</span></span></foreignObject></svg></code></pre>
+<p>By convention, named with <code>SCREAMING_SNAKE_CASE</code>. Clearly the designed have worked with with code using globals before...</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-paginate="true" data-theme="gaia" data-marpit-pagination="35" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h5>Unsafe Rust - Accessing or Modifying a Mutable Static Variable</h5>
+<p><em>Accessing and modifying mutable static variables is unsafe</em></p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">static</span> <span class="hljs-keyword">mut</span> COUNTER: <span class="hljs-built_in">u32</span> = <span class="hljs-number">0</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">add_to_count</span></span>(inc: <span class="hljs-built_in">u32</span>) {
+    <span class="hljs-keyword">unsafe</span> {
+        COUNTER += inc;
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">main</span></span>() {
+    add_to_count(<span class="hljs-number">3</span>);
+
+    <span class="hljs-keyword">unsafe</span> {
+        <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;COUNTER: {}&quot;</span>, COUNTER);                                           
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-paginate="true" data-theme="gaia" data-marpit-pagination="36" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h5>Unsafe Rust - Accessing or Modifying a Mutable Static Variable</h5>
+<h3>Why is this unsafe?</h3>
+<p>Having multiple threads access COUNTER would likely result in data races.</p>
+<p>Even without data races, globals can make it extremely difficult to reason about complex code. We'll all sleep better at night knowing they're wrapped in the unsafe guard</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="37" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h3>Unsafe Rust - Implementing an Unsafe trait</h3>
+<p>By using unsafe impl, we’re promising that we’ll uphold the invariants that the compiler can’t verify.</p>
+<p>e.g. <code>sync</code> and <code>send</code></p>
+<ul>
+<li>
+<p><code>send</code> means that a type is safe to move from one thread to another. If the same type also implements Copy, this also means that it is safe to copy from one thread to another.</p>
+</li>
+<li>
+<p><code>sync</code> means that a type is safe to <em>reference</em> from multiple threads at the same time</p>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="38" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h3>Unsafe Rust - Implementing an Unsafe trait</h3>
+<p>The compiler can only verify that our types are <code>sync</code> or <code>send</code> if they are made up of other <code>sync</code> and <code>send</code> types.</p>
+<p>If our type contains non-sync or non-send types, but we know that our types satisfy the trait requirements, we must implement the unsafe trait ourselves</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-paginate="true" data-theme="gaia" data-marpit-pagination="39" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h3>Unsafe Rust - Accessing Fields of a Union</h3>
+<p>Unions:</p>
+<ul>
+<li>similar to a struct, but only one declared field is used in a particular instance at one time</li>
+<li>primarily used to interface with unions in C code.</li>
+<li>accessing union fields is unsafe because Rust can’t guarantee the type of the data currently being stored in the union instance.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-paginate="true" data-theme="gaia" data-marpit-pagination="40" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h3>Unsafe Rust - Accessing Fields of a Union</h3>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">#[repr(C)]</span> <span class="hljs-comment">// Do what C does for data layout/representation</span>
+<span class="hljs-class"><span class="hljs-keyword">union</span> <span class="hljs-title">MyUnion</span></span> {
+    f1: <span class="hljs-built_in">u32</span>,
+    f2: <span class="hljs-built_in">f32</span>,
+}
+</span></span></foreignObject></svg></code></pre>
+<p>Creating a union is safe, accessing a field is unsafe</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> u = MyUnion { f1: <span class="hljs-number">1</span> };
+</span></span></foreignObject></svg></code></pre>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> f = <span class="hljs-keyword">unsafe</span> { u.f1 };
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-paginate="true" data-theme="gaia" data-marpit-pagination="41" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h4>Unsafe Rust - Accessing Fields of a Union</h4>
+<p><strong>Why is this unsafe??</strong></p>
+<ul>
+<li>Unions have no notion of an &quot;active field&quot;</li>
+<li>Every union access just interprets the storage at the type of the field used for the access</li>
+<li>Reading a union field reads the bits of the union at the field's type.</li>
+<li>Fields might have a non-zero offset (except when the C representation is used)</li>
+<li>It is the <strong>programmer's responsibility</strong> to make sure that the data is valid at the field's type.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-paginate="true" data-theme="gaia" data-marpit-pagination="42" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h4>Unsafe Rust - Accessing Fields of a Union</h4>
+<p>Access is essentially a reinterpret cast (<code>transmute</code> in rust speak)</p>
+<p>Failing to do so correctly results in undefined behavior.</p>
+<p>e.g. reading the value 3 through of a field of the boolean type is undefined behavior.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="43" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h2>Unsafe Rust - Conclusions</h2>
+<p>Unsafe code can be safe, but that safety is the programmers responsiblity.</p>
+<p>Bugs may happen, but the unsafe keyword makes it easier to track them down!</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-paginate="true" data-class="lead" data-theme="gaia" class="lead" data-marpit-pagination="44" data-marpit-pagination-total="96" style="--paginate:true;--class:lead;--theme:gaia;">
+<h1>Advanced Traits</h1>
+<p><em>Trait Secrets <img class="emoji" draggable="false" alt="🔒" src="https://twemoji.maxcdn.com/2/svg/1f512.svg" data-marp-twemoji=""/></em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-paginate="true" data-theme="gaia" data-marpit-pagination="45" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h1>Advanced Traits</h1>
+<h3>Placeholder Types in Trait Definitions</h3>
+<p>If you tried to implement your own iterator back in chapter 13 this code may look familiar:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Iterator</span></span> {
+    <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Item</span></span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">next</span></span>(&amp;<span class="hljs-keyword">mut</span> <span class="hljs-keyword">self</span>) -&gt; <span class="hljs-built_in">Option</span>&lt;Self::Item&gt;;
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-paginate="true" data-theme="gaia" data-marpit-pagination="46" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h3>Advanced Traits - Placeholder Types in Trait Definitions</h3>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Iterator</span></span> {
+    <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Item</span></span>; <span class="hljs-comment">// Placeholder type</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">next</span></span>(&amp;<span class="hljs-keyword">mut</span> <span class="hljs-keyword">self</span>) -&gt; <span class="hljs-built_in">Option</span>&lt;Self::Item&gt;; <span class="hljs-comment">// Used in trait definition to</span>
+}                                             <span class="hljs-comment">// define the return type of next</span>
+</span></span></foreignObject></svg></code></pre>
+<p>Implementors of the Iterator trait will specify the <strong>concrete type</strong> for <code>Item</code>, and the next method will return an <code>Option</code> containing a value of that concrete type.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-paginate="true" data-theme="gaia" data-marpit-pagination="47" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h3>Advanced Traits - Placeholder Types in Trait Definitions</h3>
+<h5>Why not use generics?</h5>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Iterator</span></span>&lt;T&gt; {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">next</span></span>(&amp;<span class="hljs-keyword">mut</span> <span class="hljs-keyword">self</span>) -&gt; <span class="hljs-built_in">Option</span>&lt;T&gt;;
+}
+</span></span></foreignObject></svg></code></pre>
+<p>Trait with generic parameters <em>could</em> be implemented for a type multiple times with different generic parameter types</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-paginate="true" data-theme="gaia" data-marpit-pagination="48" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h5>Advanced Traits - Placeholder Types in Trait Definitions</h5>
+<p>What it would look like with generics:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">MyIterator</span></span>&lt;T&gt; {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">next</span></span>(&amp;<span class="hljs-keyword">mut</span> <span class="hljs-keyword">self</span>) -&gt; <span class="hljs-built_in">Option</span>&lt;T&gt;;
+}
+</span></span></foreignObject></svg></code></pre>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">MyIterable</span></span>{}
+
+<span class="hljs-keyword">impl</span> MyIterator&lt;<span class="hljs-built_in">u32</span>&gt; <span class="hljs-keyword">for</span> MyIterable {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">next</span></span>(&amp;<span class="hljs-keyword">mut</span> <span class="hljs-keyword">self</span>) -&gt; <span class="hljs-built_in">Option</span>&lt;<span class="hljs-built_in">u32</span>&gt;{
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">Some</span>(<span class="hljs-number">1</span>);
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-paginate="true" data-theme="gaia" data-marpit-pagination="49" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h5>Advanced Traits - Placeholder Types in Trait Definitions</h5>
+<p>Fine, but opened up posibility of multiple definitions:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">MyIterable</span></span>{}
+
+<span class="hljs-keyword">impl</span> MyIterator&lt;<span class="hljs-built_in">u32</span>&gt; <span class="hljs-keyword">for</span> MyIterable {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">next</span></span>(&amp;<span class="hljs-keyword">mut</span> <span class="hljs-keyword">self</span>) -&gt; <span class="hljs-built_in">Option</span>&lt;<span class="hljs-built_in">u32</span>&gt;{
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">Some</span>(<span class="hljs-number">1</span>);
+    }
+}
+
+<span class="hljs-keyword">impl</span> MyIterator&lt;<span class="hljs-built_in">f32</span>&gt; <span class="hljs-keyword">for</span> MyIterable {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">next</span></span>(&amp;<span class="hljs-keyword">mut</span> <span class="hljs-keyword">self</span>) -&gt; <span class="hljs-built_in">Option</span>&lt;<span class="hljs-built_in">f32</span>&gt;{
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">Some</span>(<span class="hljs-number">2.2</span>);
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-paginate="true" data-theme="gaia" data-marpit-pagination="50" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h4>Advanced Traits - Placeholder Types in Trait Definitions</h4>
+<p>We want to just call next:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> val = MyIterable{};
+
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{:?}&quot;</span>, val.next()); <span class="hljs-comment">// ERROR if more than one next definition</span>
+</span></span></foreignObject></svg></code></pre>
+<p>But we now have to provide type annotations everytime we use next:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> val = MyIterable{};
+
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{:?}&quot;</span>, &lt;MyIterable <span class="hljs-keyword">as</span> MyIterator&lt;<span class="hljs-built_in">f32</span>&gt;&gt;::next(&amp;<span class="hljs-keyword">mut</span> val));
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{:?}&quot;</span>, &lt;MyIterable <span class="hljs-keyword">as</span> MyIterator&lt;<span class="hljs-built_in">u32</span>&gt;&gt;::next(&amp;<span class="hljs-keyword">mut</span> val));
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51" data-paginate="true" data-theme="gaia" data-marpit-pagination="51" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h3>Advanced Traits - Placeholder Types in Trait Definitions</h3>
+<p>So instead of generics, we use a placeholder type. That way there can only ever be one implementation of the trait on our type</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Iterator</span></span> {
+    <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Item</span></span>; <span class="hljs-comment">// Placeholder type</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">next</span></span>(&amp;<span class="hljs-keyword">mut</span> <span class="hljs-keyword">self</span>) -&gt; <span class="hljs-built_in">Option</span>&lt;Self::Item&gt;; <span class="hljs-comment">// Used here</span>
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="52" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h3>Advanced Traits - Default Generic Type Parameters and Operator Overloading</h3>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Add</span></span>&lt;Rhs=<span class="hljs-keyword">Self</span>&gt; {
+    <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Output</span></span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">add</span></span>(<span class="hljs-keyword">self</span>, rhs: Rhs) -&gt; Self::Output;
+}
+</span></span></foreignObject></svg></code></pre>
+<p>Add trait has a generic type parameter so we can add between two different types (e.g. u32 and f32), but defaults to self as the most common type</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="53" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h4>Advanced Traits - Default Generic Type Parameters and Operator Overloading</h4>
+<p>This simplifies our implementation blocks:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Point</span></span> { x: <span class="hljs-built_in">i32</span>, y: <span class="hljs-built_in">i32</span>, }
+
+<span class="hljs-keyword">impl</span> Add <span class="hljs-keyword">for</span> Point {
+    <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Output</span></span> = Point;
+
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">add</span></span>(<span class="hljs-keyword">self</span>, other: Point) -&gt; Point {                                         
+        Point {
+            x: <span class="hljs-keyword">self</span>.x + other.x,
+            y: <span class="hljs-keyword">self</span>.y + other.y,
+        }
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="54" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h4>Advanced Traits - Default Generic Type Parameters and Operator Overloading</h4>
+<p>Instead of needing an extra type annotation on the impl block:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">impl</span> Add&lt;Point&gt; <span class="hljs-keyword">for</span> Point {
+    <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Output</span></span> = Point;
+
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">add</span></span>(<span class="hljs-keyword">self</span>, other: Point) -&gt; Point {
+        Point {
+            x: <span class="hljs-keyword">self</span>.x + other.x,
+            y: <span class="hljs-keyword">self</span>.y + other.y,
+        }
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="55" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h4>Advanced Traits - Default Generic Type Parameters and Operator Overloading</h4>
+<ul>
+<li>Default type parameters like this are used in two main ways:
+<ul>
+<li>To extend a type without breaking existing code</li>
+<li>To allow customization in specific cases most users won’t need</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56" data-paginate="true" data-theme="gaia" data-marpit-pagination="56" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h3>Advanced Traits - Fully Qualified Syntax for Disambiguation: Calling Methods with the Same Name</h3>
+<p>There are only so many good names to go around, and some trait methods may have the same name...</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="57" data-paginate="true" data-theme="gaia" data-marpit-pagination="57" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Pilot</span></span> {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">fly</span></span>(&amp;<span class="hljs-keyword">self</span>);
+}
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Wizard</span></span> {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">fly</span></span>(&amp;<span class="hljs-keyword">self</span>);
+}
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Human</span></span>;
+
+<span class="hljs-keyword">impl</span> Pilot <span class="hljs-keyword">for</span> Human {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">fly</span></span>(&amp;<span class="hljs-keyword">self</span>) {
+        <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;This is your captain speaking.&quot;</span>);
+    }
+}
+<span class="hljs-keyword">impl</span> Wizard <span class="hljs-keyword">for</span> Human {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">fly</span></span>(&amp;<span class="hljs-keyword">self</span>) {
+        <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;Up!&quot;</span>);
+    }
+}
+<span class="hljs-keyword">impl</span> Human {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">fly</span></span>(&amp;<span class="hljs-keyword">self</span>) {
+        <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;*waving arms furiously*&quot;</span>);
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58" data-paginate="true" data-theme="gaia" data-marpit-pagination="58" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h4>Advanced Traits - Fully Qualified Syntax for Disambiguation: Calling Methods with the Same Name</h4>
+<p>How does rust deal with this ambiguity?</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">main</span></span>() {
+    <span class="hljs-keyword">let</span> person = Human;
+    person.fly();
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="59" data-paginate="true" data-theme="gaia" data-marpit-pagination="59" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h4>Advanced Traits - Fully Qualified Syntax for Disambiguation: Calling Methods with the Same Name</h4>
+<p>How does rust deal with this ambiguity?</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">main</span></span>() {
+    <span class="hljs-keyword">let</span> person = Human;
+    person.fly(); <span class="hljs-comment">// Defaults to method implemented directily on type</span>
+}
+</span></span></foreignObject></svg></code></pre>
+<p>To use the other <code>fly</code> methods we need to use more explicit syntax</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60" data-paginate="true" data-theme="gaia" data-marpit-pagination="60" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h4>Advanced Traits - Fully Qualified Syntax for Disambiguation: Calling Methods with the Same Name</h4>
+<p>To use the other <code>fly</code> methods we need to use more explicit syntax:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">main</span></span>() {
+    <span class="hljs-keyword">let</span> person = Human;
+    Pilot::fly(&amp;person);
+    Wizard::fly(&amp;person);
+    person.fly();
+}
+</span></span></foreignObject></svg></code></pre>
+<p>This syntax works because our fly method took the <code>&amp;self</code> parameter.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="61" data-paginate="true" data-theme="gaia" data-marpit-pagination="61" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">BabyAnimal</span></span> {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">name</span></span>() -&gt; <span class="hljs-built_in">String</span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Dog</span></span>;
+
+<span class="hljs-keyword">impl</span> Dog {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">name</span></span>() -&gt; <span class="hljs-built_in">String</span> {
+        <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;Spot&quot;</span>)
+    }
+}
+
+<span class="hljs-keyword">impl</span> BabyAnimal <span class="hljs-keyword">for</span> Dog {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">name</span></span>() -&gt; <span class="hljs-built_in">String</span> {
+        <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;puppy&quot;</span>)
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">main</span></span>() {
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;A baby dog is called a {}&quot;</span>, Dog::name());
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="62" data-paginate="true" data-theme="gaia" data-marpit-pagination="62" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h4>Advanced Traits - Fully Qualified Syntax for Disambiguation: Calling Methods with the Same Name</h4>
+<p>In this case, how do we call <code>Dog</code>'s <code>BabyAnimal</code> trait <code>name</code> method?? We can't use <code>BabyAnimal::name(&amp;dog)</code> because name doesn't take a self paramter.</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-built_in">println!</span>(Dog::name()) <span class="hljs-comment">// Prints spot</span>
+</span></span></foreignObject></svg></code></pre>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-built_in">println!</span>(BabyAnimal::name()) <span class="hljs-comment">// Could be any animal! No link to Dog!</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="63" data-paginate="true" data-theme="gaia" data-marpit-pagination="63" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h4>Advanced Traits - Fully Qualified Syntax for Disambiguation: Calling Methods with the Same Name</h4>
+<p>For these cases we need to use our fully qualified syntax:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;A baby dog is called a {}&quot;</span>, &lt;Dog <span class="hljs-keyword">as</span> BabyAnimal&gt;::name());
+</span></span></foreignObject></svg></code></pre>
+<p>This is the same syntax we saw earlier when we tried to set up our iterator trait using a genereric type parameter instead of a trait placeholder type:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{:?}&quot;</span>, &lt;MyIterable <span class="hljs-keyword">as</span> MyIterator&lt;<span class="hljs-built_in">u32</span>&gt;&gt;::next(&amp;<span class="hljs-keyword">mut</span> val));
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="64" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="64" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h3>Advanced Traits - Using Supertraits to Require One Trait’s Functionality Within Another Trait</h3>
+<p>We can use a dependent trait's method when defining a new trait by marking it a super trait of it:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">use</span> std::fmt;
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">HeartPrint</span></span>: fmt::Display {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">heart_print</span></span>(&amp;<span class="hljs-keyword">self</span>) {
+        <span class="hljs-keyword">let</span> output = <span class="hljs-keyword">self</span>.to_string(); <span class="hljs-comment">// to_string() is on fmt::Display trait</span>
+        <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;<img class="emoji" draggable="false" alt="❤" src="https://twemoji.maxcdn.com/2/svg/2764.svg" data-marp-twemoji=""/>{}<img class="emoji" draggable="false" alt="❤" src="https://twemoji.maxcdn.com/2/svg/2764.svg" data-marp-twemoji=""/>&quot;</span>, output);
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="65" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="65" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;"><pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">use</span> std::fmt;
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Loveable</span></span>{}
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">HeartPrint</span></span>: fmt::Display + Loveable {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">heart_print</span></span>(&amp;<span class="hljs-keyword">self</span>) {
+        <span class="hljs-keyword">let</span> output = <span class="hljs-keyword">self</span>.to_string(); <span class="hljs-comment">// to_string() is on fmt::Display trait</span>
+        <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;<img class="emoji" draggable="false" alt="❤" src="https://twemoji.maxcdn.com/2/svg/2764.svg" data-marp-twemoji=""/>{}<img class="emoji" draggable="false" alt="❤" src="https://twemoji.maxcdn.com/2/svg/2764.svg" data-marp-twemoji=""/>&quot;</span>, output);
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Programming</span></span>{}
+
+<span class="hljs-keyword">impl</span> fmt::Display <span class="hljs-keyword">for</span> Programming {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">fmt</span></span>(&amp;<span class="hljs-keyword">self</span>, f: &amp;<span class="hljs-keyword">mut</span> fmt::Formatter) -&gt; fmt::<span class="hljs-built_in">Result</span> {
+        <span class="hljs-built_in">write!</span>(f, <span class="hljs-string">&quot;{}&quot;</span>, <span class="hljs-string">&quot;Programming&quot;</span>)
+    }
+}
+
+<span class="hljs-keyword">impl</span> Loveable <span class="hljs-keyword">for</span> Programming {}
+
+<span class="hljs-keyword">impl</span> HeartPrint <span class="hljs-keyword">for</span> Programming {}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="66" data-paginate="true" data-theme="gaia" data-marpit-pagination="66" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h3>Advanced Traits - Using the Newtype Pattern to Implement External Traits on External Types</h3>
+<p>We can only implement a trait on a type if either the <code>type</code> or the <code>trait</code> are local to our crate.</p>
+<p>This means we can't, for example, implement format on a vector of strings.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="67" data-paginate="true" data-theme="gaia" data-marpit-pagination="67" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h3>Advanced Traits - Using the Newtype Pattern to Implement External Traits on External Types</h3>
+<p>We can instead implement the trait on a thin tuple struct wrapper type</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">use</span> std::fmt;
+
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">MyWrapper</span></span>(<span class="hljs-built_in">Vec</span>&lt;<span class="hljs-built_in">String</span>&gt;);
+
+<span class="hljs-keyword">impl</span> fmt::Display <span class="hljs-keyword">for</span> MyWrapper {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">fmt</span></span>(&amp;<span class="hljs-keyword">self</span>, f: &amp;<span class="hljs-keyword">mut</span> fmt::Formatter) -&gt; fmt::<span class="hljs-built_in">Result</span> {
+        <span class="hljs-built_in">write!</span>(f, <span class="hljs-string">&quot;[{}]&quot;</span>, <span class="hljs-keyword">self</span>.<span class="hljs-number">0</span>.join(<span class="hljs-string">&quot;, &quot;</span>))
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="68" data-paginate="true" data-theme="gaia" data-marpit-pagination="68" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h3>Advanced Traits - Using the Newtype Pattern to Implement External Traits on External Types</h3>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">MyWrapper</span></span>(<span class="hljs-built_in">Vec</span>&lt;<span class="hljs-built_in">String</span>&gt;);                                                            
+</span></span></foreignObject></svg></code></pre>
+<p>Note: we need to access the first element in our tuple struct to get to the inner type and any methods on it e.g. sort</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> my_vec = MyWrapper(<span class="hljs-built_in">vec!</span>[<span class="hljs-string">&quot;sort&quot;</span>.to_string(),<span class="hljs-string">&quot;vec&quot;</span>.to_string(),<span class="hljs-string">&quot;strings&quot;</span>.to_string()]);
+my_vec.<span class="hljs-number">0</span>.sort();
+</span></span></foreignObject></svg></code></pre>
+<p>If we really wanted the new type to have every method the inner type has, we could implement the <code>Deref</code> trait</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="69" data-paginate="true" data-class="lead invert" data-theme="gaia" class="lead invert" data-marpit-pagination="69" data-marpit-pagination-total="96" style="--paginate:true;--class:lead invert;--theme:gaia;">
+<h1>Advanced Types</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="70" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="70" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h3>Advanced Types - Using the Newtype Pattern for Type Safety and Abstraction</h3>
+<p>By creating new <code>Millimeters</code> and <code>Meters</code> wrapper types instead of using <code>u32</code>s we can make common units bugs easier to spot and prevent</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Millimeters</span></span>(<span class="hljs-built_in">u32</span>);
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Meters</span></span>(<span class="hljs-built_in">u32</span>);
+
+<span class="hljs-keyword">impl</span> Add&lt;Meters&gt; <span class="hljs-keyword">for</span> Millimeters {
+    <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Output</span></span> = Millimeters;
+
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">add</span></span>(<span class="hljs-keyword">self</span>, meters: Meters) -&gt; Millimeters {
+        Millimeters(<span class="hljs-keyword">self</span>.<span class="hljs-number">0</span> + (meters.<span class="hljs-number">0</span> * <span class="hljs-number">1000</span>))
+    }                                                                                         
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="71" data-paginate="true" data-theme="gaia" data-marpit-pagination="71" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h3>Advanced Types - Using the Newtype Pattern for Type Safety and Abstraction</h3>
+<p>Creating these wrappter types also allows us to expose a public API that is different from the API of the private inner type.</p>
+<p>Example: Internally store <code>HashMap&lt;i32, String&gt;</code>, but provide simple API which assigns an ID internally:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> people = People::new();
+people.add_person(<span class="hljs-string">&quot;Ferris&quot;</span>);
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="72" data-paginate="true" data-theme="gaia" data-marpit-pagination="72" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h4>Advanced Types - Using the Newtype Pattern for Type Safety and Abstraction</h4>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">People</span></span>(HashMap&lt;<span class="hljs-built_in">i32</span>, <span class="hljs-built_in">String</span>&gt;);
+
+<span class="hljs-keyword">impl</span> People {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">new</span></span>() -&gt; People {
+        People(HashMap::new())
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">add_person</span></span>(&amp;<span class="hljs-keyword">mut</span> <span class="hljs-keyword">self</span>, name: &amp;<span class="hljs-built_in">str</span>) {
+        <span class="hljs-keyword">self</span>.<span class="hljs-number">0</span>.insert(new_id(), name.to_string());
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+<p>Providing lightweight encapsulation</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="73" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="73" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h3>Advanced Types - Creating Type Synonyms with Type Aliases</h3>
+<p>We may also see see type aliases used in place of simple types</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Kilometers</span></span> = <span class="hljs-built_in">i32</span>;
+
+<span class="hljs-keyword">let</span> x: <span class="hljs-built_in">i32</span> = <span class="hljs-number">5</span>;
+<span class="hljs-keyword">let</span> y: Kilometers = <span class="hljs-number">5</span>;
+
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;x + y = {}&quot;</span>, x + y);
+</span></span></foreignObject></svg></code></pre>
+<p>This doesn't give us the type safety which the newtype pattern we have just seen, as it is simply an alias</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="74" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="74" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h3>Advanced Types - Creating Type Synonyms with Type Aliases</h3>
+<p>But it can still be useful for avoiding reqriting cumbersome verbose types, or to make our code clearer.</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Thunk</span></span> = <span class="hljs-built_in">Box</span>&lt;<span class="hljs-keyword">dyn</span> <span class="hljs-built_in">Fn</span>() + <span class="hljs-built_in">Send</span> + <span class="hljs-symbol">&#x27;static</span>&gt;;
+
+<span class="hljs-keyword">let</span> f: Thunk = <span class="hljs-built_in">Box</span>::new(|| <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;hi&quot;</span>));
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">takes_long_type</span></span>(f: Thunk) {
+    <span class="hljs-comment">// --snip--</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">returns_long_type</span></span>() -&gt; Thunk {
+    <span class="hljs-comment">// --snip--</span>
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="75" data-paginate="true" data-theme="gaia" data-marpit-pagination="75" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h1>Advanced Types - The Never Type that Never Returns <img class="emoji" draggable="false" alt="🤔" src="https://twemoji.maxcdn.com/2/svg/1f914.svg" data-marp-twemoji=""/></h1>
+<p>What? Why? What on earth?</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="76" data-paginate="true" data-theme="gaia" data-marpit-pagination="76" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h1>Advanced Types - The Never Type that Never Returns <img class="emoji" draggable="false" alt="🤔" src="https://twemoji.maxcdn.com/2/svg/1f914.svg" data-marp-twemoji=""/></h1>
+<p>These are the return type of 'diverging functions' which never return, and are denoted with an exclamation mark <code>!</code>. It can be coerced into any type, since it never returns anyway!</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">#![feature(never_type)]</span>
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">main</span></span>() {
+    <span class="hljs-keyword">let</span> x: ! = <span class="hljs-built_in">panic!</span>(<span class="hljs-string">&quot;This call never returns.&quot;</span>);
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;You will never see this line!&quot;</span>);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="77" data-paginate="true" data-theme="gaia" data-marpit-pagination="77" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">sum_odd_numbers</span></span>(up_to: <span class="hljs-built_in">u32</span>) -&gt; <span class="hljs-built_in">u32</span> {
+    <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> acc = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">0</span>..up_to {
+        <span class="hljs-comment">// Notice that the return type of this match expression must be u32</span>
+        <span class="hljs-keyword">let</span> addition: <span class="hljs-built_in">u32</span> = <span class="hljs-keyword">match</span> i%<span class="hljs-number">2</span> == <span class="hljs-number">1</span> {
+            <span class="hljs-comment">// The &quot;i&quot; variable is of type u32, which is perfectly fine.</span>
+            <span class="hljs-literal">true</span> =&gt; i,
+            <span class="hljs-comment">// On the other hand, the &quot;continue&quot; expression does not return</span>
+            <span class="hljs-comment">// u32, but it is still fine, because it never returns and therefore</span>
+            <span class="hljs-comment">// does not violate the type requirements of the match expression.</span>
+            <span class="hljs-literal">false</span> =&gt; <span class="hljs-keyword">continue</span>,
+        };
+        acc += addition;
+    }
+    acc
+}
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;Sum of odd numbers up to 9 (excluding): {}&quot;</span>, sum_odd_numbers(<span class="hljs-number">9</span>));
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="78" data-paginate="true" data-theme="gaia" data-marpit-pagination="78" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h2>Advanced Types - The Never Type that Never Returns <img class="emoji" draggable="false" alt="🤔" src="https://twemoji.maxcdn.com/2/svg/1f914.svg" data-marp-twemoji=""/></h2>
+<p><code>continue</code> is returning our 'never type', which is why the type checker isn't complaining that something other than a u32 is being assigned into our <code>addition</code> variable.</p>
+<p>The 'never type' is also the return type of functions that loop forever (e.g. <code>loop {}</code>) like network servers or functions that terminate the process (e.g. <code>exit()</code> or <code>panic!</code>).</p>
+<p><em>Though this be madness, yet there is method in't</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="79" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="79" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h2>Advanced Types - Dynamically Sized Types and the Sized Trait</h2>
+<p>Where is this?</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> hello = <span class="hljs-string">&quot;hello&quot;</span>;
+</span></span></foreignObject></svg></code></pre>
+<p>That stack? The heap? Somewhere else??</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="80" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="80" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h3>Advanced Types - Dynamically Sized Types and the Sized Trait</h3>
+<p>Well what type is it? If we annotate it with <code>str</code>:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> hello: <span class="hljs-built_in">str</span> = <span class="hljs-string">&quot;hello&quot;</span>; <span class="hljs-comment">// ERROR</span>
+</span></span></foreignObject></svg></code></pre>
+<p>We get an error:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>the size for values of type `str` cannot be known at compilation time
+the trait `Sized` is not implemented for `str`
+all local variables must have a statically known size
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="81" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="81" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h3>Advanced Types - Dynamically Sized Types and the Sized Trait</h3>
+<p>We know the length of <strong>our string</strong> at compile time, but not the length of the <strong>type <code>str</code></strong></p>
+<p>Because <code>str</code> is a dynamically sized type.</p>
+<p>The correct type annotation is <code>&amp;str</code></p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> hello: &amp;<span class="hljs-built_in">str</span> = <span class="hljs-string">&quot;hello&quot;</span>;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="82" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="82" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h3>Advanced Types - Dynamically Sized Types and the Sized Trait</h3>
+<p>The string literal goes into your read-only data (ro.data) of your executable. It doens't allocate at run time, and its type has a known stack size at compile time.</p>
+<p>The stack component is simply a pointer to its address, and its size.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="83" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="83" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h3>Advanced Types - Dynamically Sized Types and the Sized Trait</h3>
+<p>The error we got for type to type annotate with <code>str</code> mentioned the <code>Sized</code> trait not being implemented.</p>
+<p>The <code>Sized</code> trait is automatically implemented for all types where the size is known at compile time.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="84" data-paginate="true" data-class="lead" data-theme="gaia" class="lead" data-marpit-pagination="84" data-marpit-pagination-total="96" style="--paginate:true;--class:lead;--theme:gaia;">
+<h1>Advanced Functions and Closures</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="85" data-paginate="true" data-theme="gaia" data-marpit-pagination="85" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h2>Advanced Functions and Closures - Function Pointers</h2>
+<p>Function pointers allow us to pass functions to other functions (as opposed to closures, which are anonymous and might capture state where they're reated).</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="86" data-paginate="true" data-theme="gaia" data-marpit-pagination="86" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h3>Advanced Functions and Closures - Function Pointers</h3>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">add_one</span></span>(x: <span class="hljs-built_in">i32</span>) -&gt; <span class="hljs-built_in">i32</span> {
+    x + <span class="hljs-number">1</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">do_twice</span></span>(f: <span class="hljs-function"><span class="hljs-keyword">fn</span></span>(<span class="hljs-built_in">i32</span>) -&gt; <span class="hljs-built_in">i32</span>, arg: <span class="hljs-built_in">i32</span>) -&gt; <span class="hljs-built_in">i32</span> {
+    f(arg) + f(arg)
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">main</span></span>() {
+    <span class="hljs-keyword">let</span> answer = do_twice(add_one, <span class="hljs-number">5</span>);
+
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;The answer is: {}&quot;</span>, answer);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="87" data-paginate="true" data-theme="gaia" data-marpit-pagination="87" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h3>Advanced Functions and Closures - Function Pointers</h3>
+<p>Our type <code>fn(i32) -&gt; i32</code> is a function pointer</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">do_twice</span></span>(f: <span class="hljs-function"><span class="hljs-keyword">fn</span></span>(<span class="hljs-built_in">i32</span>) -&gt; <span class="hljs-built_in">i32</span>, arg: <span class="hljs-built_in">i32</span>) -&gt; <span class="hljs-built_in">i32</span> {
+    f(arg) + f(arg)
+}
+</span></span></foreignObject></svg></code></pre>
+<p>When we covered closures in chapter 13 we were using generic type parameters with an <code>Fn</code> trait bound, but here we are using a concrete type of 'function pointer'</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="88" data-paginate="true" data-theme="gaia" data-marpit-pagination="88" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h3>Advanced Functions and Closures - Function Pointers</h3>
+<p>Function pointers can be used wherever closures can be used as they implement all three of the closure traits:</p>
+<ul>
+<li><code>Fn</code></li>
+<li><code>FnMut</code></li>
+<li><code>FnOnce</code></li>
+</ul>
+<p>It is usually preferred to used the generic type parameters, to allow both closures and function pointers to be passed in</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="89" data-paginate="true" data-theme="gaia" data-marpit-pagination="89" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h4>Advanced Functions and Closures - Function Pointers</h4>
+<p>Let's compare using a closure vs a function pointer when mapping <code>let list_of_numbers = vec![1, 2, 3];</code> to strings</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-keyword">let</span> list_of_strings: <span class="hljs-built_in">Vec</span>&lt;<span class="hljs-built_in">String</span>&gt; =
+        list_of_numbers.iter().map(|i| i.to_string()).collect();
+</span></span></foreignObject></svg></code></pre>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>    <span class="hljs-keyword">let</span> list_of_strings: <span class="hljs-built_in">Vec</span>&lt;<span class="hljs-built_in">String</span>&gt; =
+        list_of_numbers.iter().map(<span class="hljs-built_in">ToString</span>::to_string).collect();
+</span></span></foreignObject></svg></code></pre>
+<p><code>|i| i.to_string()</code> vs <code>ToString::to_string</code></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="90" data-paginate="true" data-theme="gaia" data-marpit-pagination="90" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h4>Advanced Functions and Closures - Function Pointers</h4>
+<p>Similarly, we can map a list of values to an enum which wraps them, using either a closure, or a function pointer in the form of the enum type:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">enum</span> <span class="hljs-title">Status</span></span> {
+    Value(<span class="hljs-built_in">u32</span>),
+    Stop,
+}
+
+<span class="hljs-keyword">let</span> use_func_ptr: <span class="hljs-built_in">Vec</span>&lt;Status&gt; = (<span class="hljs-number">0u32</span>..<span class="hljs-number">20</span>).map(Status::Value).collect();
+
+<span class="hljs-keyword">let</span> use_closure: <span class="hljs-built_in">Vec</span>&lt;Status&gt; = (<span class="hljs-number">0u32</span>..<span class="hljs-number">20</span>).map(|val| Status::Value(val)).collect();
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="91" data-paginate="true" data-theme="gaia" data-marpit-pagination="91" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h4>Advanced Functions and Closures - Function Pointers</h4>
+<p>Function pointers can be returned from functions:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">returns_function_pointer</span></span>() -&gt; <span class="hljs-function"><span class="hljs-keyword">fn</span></span>() -&gt; <span class="hljs-built_in">i32</span> {
+    my_function
+}
+</span></span></foreignObject></svg></code></pre>
+<p>But closures cannot since Rust doesn’t know how much space it will need to store the closure.</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">returns_closure</span></span>() -&gt; <span class="hljs-keyword">dyn</span> <span class="hljs-built_in">Fn</span>(<span class="hljs-built_in">i32</span>) -&gt; <span class="hljs-built_in">i32</span> {
+    |i| i + <span class="hljs-number">1</span>
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="92" data-paginate="true" data-theme="gaia" data-marpit-pagination="92" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;">
+<h4>Advanced Functions and Closures - Function Pointers</h4>
+<p>The error message gives us a work around for simple cases:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">returns_closure</span></span>() -&gt; <span class="hljs-keyword">impl</span> <span class="hljs-built_in">Fn</span>(<span class="hljs-built_in">i32</span>) -&gt; <span class="hljs-built_in">i32</span> {
+    |i| i + <span class="hljs-number">1</span>
+}
+</span></span></foreignObject></svg></code></pre>
+<p>but for more general return values we may need to use the <code>Box</code> type</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">returns_closure</span></span>() -&gt; <span class="hljs-built_in">Box</span>&lt;<span class="hljs-keyword">dyn</span> <span class="hljs-built_in">Fn</span>(<span class="hljs-built_in">i32</span>) -&gt; <span class="hljs-built_in">i32</span>&gt; {
+    <span class="hljs-built_in">Box</span>::new(|x| x + <span class="hljs-number">1</span>)
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="93" data-paginate="true" data-class="lead invert" data-theme="gaia" class="lead invert" data-marpit-pagination="93" data-marpit-pagination-total="96" style="--paginate:true;--class:lead invert;--theme:gaia;">
+<h1>Macros</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="94" data-paginate="true" data-class="lead" data-theme="gaia" class="lead" data-marpit-pagination="94" data-marpit-pagination-total="96" style="--paginate:true;--class:lead;--theme:gaia;">
+<h1>To be continued...</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="95" data-paginate="true" data-class="invert" data-theme="gaia" class="invert" data-marpit-pagination="95" data-marpit-pagination-total="96" style="--paginate:true;--class:invert;--theme:gaia;">
+<h1>What next?</h1>
+<ul>
+<li><em>Chapter 20: Final Project: Building a Multithreaded Web Server</em></li>
+<li>And Beyond!!</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="96" data-paginate="true" data-theme="gaia" data-marpit-pagination="96" data-marpit-pagination-total="96" style="--paginate:true;--theme:gaia;"></section>
+<script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstElementChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
+</script></foreignObject></svg></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@1.5.2/lib/bespoke.js.LICENSE.txt */
+!function(){"use strict";const e=document.body,t=(...e)=>history.replaceState(...e),n="presenter",r="next",o=["",n,r],a="data-bespoke-marp-",i=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const a=e.toString();return`${t}//${n}${r}${a?"?":""}${a}${o}`},s=()=>e.dataset.bespokeView,l=e=>new URLSearchParams(location.search).get(e),c=(e,n={})=>{var r;const o={location,setter:t,...n},a=new URLSearchParams(o.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?a.set(t,n):a.delete(t)}try{o.setter({...null!==(r=window.history.state)&&void 0!==r?r:{}},"",i(a,o.location))}catch(e){console.error(e)}},d=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch(e){return!1}})(),f=e=>{try{return localStorage.getItem(e)}catch(e){return null}},u=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch(e){return!1}},m=e=>{try{return localStorage.removeItem(e),!0}catch(e){return!1}},g=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},p=e=>{e.parent.classList.add("bespoke-marp-parent"),e.slides.forEach((e=>e.classList.add("bespoke-marp-slide"))),e.on("activate",(t=>{const n="bespoke-marp-active",r=t.slide,o=r.classList,a=!o.contains(n);if(e.slides.forEach((e=>{e.classList.remove(n),g(e,!0)})),o.add(n),g(r,!1),a){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}}))},v=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map((e=>[null,...e.querySelectorAll("[data-marpit-fragment]")]))});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach(((e,t)=>{e.forEach(((e,n)=>{if(null==e)return;const i=t<r||t===r&&n<=o;e.setAttribute(`${a}fragment`,(i?"":"in")+"active");const s=`${a}current-fragment`;t===r&&n===o?e.setAttribute(s,"current"):e.removeAttribute(s)}))})),e.fragmentIndex=o;const i={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",i)};e.on("next",(({fragment:a=!0})=>{if(a){if(r(1))return o(t,n+1),!1;const a=t+1;e.fragments[a]&&o(a,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const a=e.fragments[t+1];a&&o(t+1,a.length-1)}})),e.on("prev",(({fragment:a=!0})=>{if(r(-1)&&a)return o(t,n-1),!1;const i=t-1;e.fragments[i]&&o(i,e.fragments[i].length-1)})),e.on("slide",(({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)})),o(0,0)},h=document,y=()=>!(!h.fullscreenEnabled&&!h.webkitFullscreenEnabled),x=()=>!(!h.fullscreenElement&&!h.webkitFullscreenElement),w=e=>{e.fullscreen=()=>{y()&&(async()=>{return x()?null===(e=h.exitFullscreen||h.webkitExitFullscreen)||void 0===e?void 0:e.call(h):((e=h.body)=>{var t;return null===(t=e.requestFullscreen||e.webkitRequestFullscreen)||void 0===t?void 0:t.call(e)})();var e})()},document.addEventListener("keydown",(t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!y()||(e.fullscreen(),t.preventDefault())}))},b="bespoke-marp-inactive",k=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let a;const i=()=>{a&&clearTimeout(a),a=setTimeout((()=>{r.add(b),o()}),e),r.contains(b)&&(r.remove(b),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,i);setTimeout(i,0)},E=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],L=e=>{e.parent.addEventListener("keydown",(e=>{if(!e.target)return;const t=e.target;(E.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()}))},$=e=>{window.addEventListener("load",(()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute(`${a}load`,e)}}))},P=({interval:e=250}={})=>t=>{document.addEventListener("keydown",(e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()}));let n,r,o=0;t.parent.addEventListener("wheel",(a=>{let i=!1;const s=(e,t)=>{e&&(i=i||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),(null==e?void 0:e.parentElement)&&s(e.parentElement,t)};if(0!==a.deltaX&&s(a.target,"X"),0!==a.deltaY&&s(a.target,"Y"),i)return;a.preventDefault();const l=Math.sqrt(a.deltaX**2+a.deltaY**2);if(void 0!==a.wheelDelta){if(void 0===a.webkitForce&&Math.abs(a.wheelDelta)<40)return;if(a.deltaMode===a.DOM_DELTA_PIXEL&&l<4)return}else if(a.deltaMode===a.DOM_DELTA_PIXEL&&l<12)return;r&&clearTimeout(r),r=setTimeout((()=>{n=0}),e);const c=Date.now()-o<e,d=l<=n;if(n=l,c||d)return;let f;(a.deltaX>0||a.deltaY>0)&&(f="next"),(a.deltaX<0||a.deltaY<0)&&(f="prev"),f&&(t[f](),o=Date.now())}))},S=(e=".bespoke-marp-osc")=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${a}osc=${JSON.stringify(e)}]`).forEach(n)};return y()||n("fullscreen",(e=>e.style.display="none")),d||n("presenter",(e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."})),e=>{t.addEventListener("click",(t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?null==e||e.fullscreen():"presenter"===n&&e.openPresenterView()}})),e.parent.appendChild(t),e.on("activate",(({index:t})=>{n("page",(n=>n.textContent=`Page ${t+1} of ${e.slides.length}`))})),e.on("fragment",(({index:t,fragments:r,fragmentIndex:o})=>{n("prev",(e=>e.disabled=0===t&&0===o)),n("next",(n=>n.disabled=t===e.slides.length-1&&o===r.length-1))})),e.on("marp-active",(()=>g(t,!1))),e.on("marp-inactive",(()=>g(t,!0))),y()&&(e=>{for(const t of["","webkit"])h.addEventListener(t+"fullscreenchange",e)})((()=>n("fullscreen",(e=>e.classList.toggle("exit",y()&&x())))))}},I=e=>{window.addEventListener("message",(t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),a=Number.parseInt(n,10)+1;a>=e.fragments[o].length&&(o+=1,a=0),e.slide(o,{fragment:a})}}))};var T=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"];let A=e=>String(e).replace(/[&<>"']/g,(e=>`&${C[e]};`)),C={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},N="dangerouslySetInnerHTML",K={className:"class",htmlFor:"for"},O={};function D(e,t){let n=[],r="";t=t||{};for(let e=arguments.length;e-- >2;)n.push(arguments[e]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(let e in t)!1!==t[e]&&null!=t[e]&&e!==N&&(r+=` ${K[e]?K[e]:A(e)}="${A(t[e])}"`);r+=">"}if(-1===T.indexOf(e)){if(t[N])r+=t[N].__html;else for(;n.length;){let e=n.pop();if(e)if(e.pop)for(let t=e.length;t--;)n.push(e[t]);else r+=!0===O[e]?e:A(e)}r+=e?`</${e}>`:""}return O[r]=!0,r}const M=({children:e})=>D(null,null,...e),q="bespoke-marp-presenter-",_={container:`${q}container`,next:`${q}next`,nextContainer:`${q}next-container`,noteContainer:`${q}note-container`,infoContainer:`${q}info-container`,infoPage:`${q}info-page`,infoPageText:`${q}info-page-text`,infoPagePrev:`${q}info-page-prev`,infoPageNext:`${q}info-page-next`,infoTime:`${q}info-time`,infoTimer:`${q}info-timer`},U=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=_.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",D(M,null,D("div",{class:_.nextContainer},D("iframe",{class:_.next,src:"?view=next"})),D("div",{class:_.noteContainer}),D("div",{class:_.infoContainer},D("div",{class:_.infoPage},D("button",{class:_.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),D("span",{class:_.infoPageText}),D("button",{class:_.infoPageNext,tabindex:"-1",title:"Next"},"Next")),D("time",{class:_.infoTime,title:"Current time"}),D("div",{class:_.infoTimer})))),t})(e.parent)),(e=>{r(_.nextContainer).addEventListener("click",(()=>e.next()));const t=r(_.next),n=(o=t,(e,t)=>{var n;return null===(n=o.contentWindow)||void 0===n?void 0:n.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin)});var o;t.addEventListener("load",(()=>{r(_.nextContainer).classList.add("active"),n(e.slide(),e.fragmentIndex),e.on("fragment",(({index:e,fragmentIndex:t})=>n(e,t)))}));const a=document.querySelectorAll(".bespoke-marp-note");a.forEach((e=>{e.addEventListener("keydown",(e=>e.stopPropagation())),r(_.noteContainer).appendChild(e)})),e.on("activate",(()=>a.forEach((t=>t.classList.toggle("active",t.dataset.index==e.slide()))))),e.on("activate",(({index:t})=>{r(_.infoPageText).textContent=`${t+1} / ${e.slides.length}`}));const i=r(_.infoPagePrev),s=r(_.infoPageNext);i.addEventListener("click",(t=>{i.blur(),e.prev({fragment:!t.shiftKey})})),s.addEventListener("click",(t=>{s.blur(),e.next({fragment:!t.shiftKey})})),e.on("fragment",(({index:t,fragments:n,fragmentIndex:r})=>{i.disabled=0===t&&0===r,s.disabled=t===e.slides.length-1&&r===n.length-1}));const l=()=>r(_.infoTime).textContent=(new Date).toLocaleTimeString();l(),setInterval(l,250)})(e)},V=e=>{if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:X},presenterUrl:{enumerable:!0,get:F}}),d&&document.addEventListener("keydown",(t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())}))};function X(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,q+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function F(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),i(e)}const B=e=>{const t=s();return t===r&&e.appendChild(document.createElement("span")),{"":V,[n]:U,[r]:I}[t]},R=e=>{e.on("activate",(t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach((n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"}))}))},j=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},H=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{((t,n)=>{const{min:r,max:o}=Math,{fragments:a,slides:i}=e,s=o(0,r(t,i.length-1)),l=o(0,r(n||0,a[s].length-1));s===e.slide()&&l===e.fragmentIndex||e.slide(s,{fragment:l})})((j(location.hash.slice(1))||1)-1,t.fragment?j(l("f")||""):null)};e.on("fragment",(({index:e,fragmentIndex:r})=>{n||c({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})})),setTimeout((()=>{o(),window.addEventListener("hashchange",(()=>r((()=>{o({fragment:!1}),c({f:void 0})})))),window.addEventListener("popstate",(()=>{n||r((()=>o()))})),n=!1}),0)}},Y=(e={})=>{var n;const r=e.key||(null===(n=window.history.state)||void 0===n?void 0:n.marpBespokeSyncKey)||Math.random().toString(36).slice(2),o=`bespoke-marp-sync-${r}`;var a;a={marpBespokeSyncKey:r},c({},{setter:(e,...n)=>t({...e,...a},...n)});const i=()=>{const e=f(o);return e?JSON.parse(e):Object.create(null)},s=e=>{const t=i(),n={...t,...e(t)};return u(o,JSON.stringify(n)),n},l=()=>{window.removeEventListener("pageshow",l),s((e=>({reference:(e.reference||0)+1})))};return e=>{l(),Object.defineProperty(e,"syncKey",{value:r,enumerable:!0});let t=!0;setTimeout((()=>{e.on("fragment",(e=>{t&&s((()=>({index:e.index,fragmentIndex:e.fragmentIndex})))}))}),0),window.addEventListener("storage",(n=>{if(n.key===o&&n.oldValue&&n.newValue){const r=JSON.parse(n.oldValue),o=JSON.parse(n.newValue);if(r.index!==o.index||r.fragmentIndex!==o.fragmentIndex)try{t=!1,e.slide(o.index,{fragment:o.fragmentIndex})}finally{t=!0}}}));const n=()=>{const{reference:e}=i();void 0===e||e<=1?m(o):s((()=>({reference:e-1})))};window.addEventListener("pagehide",(e=>{e.persisted&&window.addEventListener("pageshow",l),n()})),e.on("destroy",n)}},{PI:J,abs:W,sqrt:z,atan2:G}=Math,Q={passive:!0},Z=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,a=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",(({touches:e})=>{r=1===e.length?a(e[0]):void 0}),Q),o.addEventListener("touchmove",(e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=a(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=z(W(n)**2+W(o)**2),r.radian=G(n,o)}else r=void 0})),o.addEventListener("touchend",(o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+J)%(2*J)-J;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}}),Q)},ee="_tA",te=e=>{const t=document.documentTransition;if(!t)return;let n;e._tP=!1;const r=(n,{back:r,cond:o})=>a=>{const i=e.slides[e.slide()].querySelector("section[data-transition]");if(!i)return!0;const s=document.querySelector(".bespoke-marp-osc"),l=s?[s]:void 0;if(e._tP){if(a._tA){e._tP=!1;try{t.start({sharedElements:l}).catch((()=>{}))}catch(e){}return!0}}else{if(!o(a))return!0;e._tP=t.prepare({rootTransition:a.back||r?i.dataset.transitionBack:i.dataset.transition,sharedElements:l}).then((()=>n(a))).catch((()=>n(a)))}return!1};e.on("prev",r((t=>e.prev({...t,[ee]:!0})),{back:!0,cond:e=>{var t;return e.index>0&&!((null===(t=e.fragment)||void 0===t||t)&&n.fragmentIndex>0)}})),e.on("next",r((t=>e.next({...t,[ee]:!0})),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout((()=>{e.on("slide",r((t=>e.slide(t.index,{...t,[ee]:!0})),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))}),0),e.on("fragment",(e=>{n=e}))};let ne;const re=()=>(void 0===ne&&(ne="wakeLock"in navigator&&navigator.wakeLock),ne),oe=async()=>{const e=re();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},ae=async()=>{if(!re())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&oe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await oe(),e};((t=document.getElementById("p"))=>{(()=>{const t=l("view");e.dataset.bespokeView=t===r||t===n?t:""})();const a=(e=>{const t=l(e);return c({[e]:void 0}),t})("sync")||void 0;var i,d,f,u,m,g,h,y,x,b,E,I;i=t,d=((...e)=>{const t=o.findIndex((e=>s()===e));return e.map((([e,n])=>e[t]&&n)).filter((e=>e))})([[1,1,0],Y({key:a})],[[1,1,1],B(t)],[[1,1,0],L],[[1,1,1],p],[[1,0,0],k()],[[1,1,1],$],[[1,1,1],H({history:!1})],[[1,1,0],P()],[[1,1,0],w],[[1,0,0],R],[[1,1,0],Z()],[[1,0,0],S()],[[1,0,0],te],[[1,1,1],v],[[1,1,0],ae]),u=1===(i.parent||i).nodeType?i.parent||i:document.querySelector(i.parent||i),m=[].filter.call("string"==typeof i.slides?u.querySelectorAll(i.slides):i.slides||u.children,(function(e){return"SCRIPT"!==e.nodeName})),g={},h=function(e,t){return(t=t||{}).index=m.indexOf(e),t.slide=e,t},b=function(e,t){m[e]&&(f&&x("deactivate",h(f,t)),f=m[e],x("activate",h(f,t)))},E=function(e,t){var n=m.indexOf(f)+e;x(e>0?"next":"prev",h(f,t))&&b(n,t)},I={off:y=function(e,t){g[e]=(g[e]||[]).filter((function(e){return e!==t}))},on:function(e,t){return(g[e]||(g[e]=[])).push(t),y.bind(null,e,t)},fire:x=function(e,t){return(g[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},slide:function(e,t){if(!arguments.length)return m.indexOf(f);x("slide",h(m[e],t))&&b(e,t)},next:E.bind(null,1),prev:E.bind(null,-1),parent:u,slides:m,destroy:function(e){x("destroy",h(f,e)),g={}}},(d||[]).forEach((function(e){e(I)})),f||b(0)})()}();</script></body></html>

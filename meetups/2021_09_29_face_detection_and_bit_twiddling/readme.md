@@ -1,0 +1,1 @@
+[Face detection with OpenCV-Rust, and Quake III Fast Inverse Sqrt Breakdown](https://www.youtube.com/watch?v=9ZvdgmR1e7Q)

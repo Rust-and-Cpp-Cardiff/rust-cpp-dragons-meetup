@@ -1,0 +1,1 @@
+[Using Rust to understand the Little Schemer](https://www.youtube.com/watch?v=J2GCw5oYiHU)
