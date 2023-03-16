@@ -1,0 +1,1 @@
+[Rust Traits vs C++ Concepts](https://www.youtube.com/watch?v=f68FtmUTl3s)

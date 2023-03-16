@@ -1,0 +1,1 @@
+[Rust Common Programming Concepts & Understanding Ownership (3-4)](https://www.youtube.com/watch?v=NquNkzNYUq0)

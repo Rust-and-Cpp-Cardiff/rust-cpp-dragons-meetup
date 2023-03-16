@@ -1,0 +1,64 @@
+To send in zoom chat:
+- twitter: @rustcpp_cardiff
+- email: rustandcppcardiff@gmail.com
+- discord: https://discorg.gg/dU93rHt6
+
+- Rust toolchain installation: https://www.rust-lang.org/tools/install
+- After installing toolchain, open "The Book" with command: `rustup doc --book` OR access online https://doc.rust-lang.org/book/
+
+Hi everyone, for those of you who haven't been before, this is Rust and C++ Cardiff. We have a twitter, email, and discord. I've put them in the chat.
+
+We're a fairly informal group of keen people, We started this meetup because we wanted a space to learn from eachother and create a community to share ideas, challenge ourselves, find solutions and hopefully introduce some new people to the community too!
+
+We have a code of conduct which is just the rust code of conduct, the general gist of it is be excellent to eachother :)
+
+So with that housekeeping out of the way - Welcome, or welcome back to Rust and C++ Cardiff book club.
+
+I believe we have some new faces, so I wanted to do a quick poll to start off just to see where every one is at with Rust to hlep dictate how we pace the meetup
+
+- I don't have rust installed on my machine yet
+- I have the rust toolchain set up on my machine but haven't written any rust yet
+- I have been through chapter 1
+- I have been through chapter 2
+- I have been through chapter 3
+- I have been through chapter 4
+- More
+
+
+
+And I also wanted to check how many are actually newcomers 
+
+- I was there last session for Rust setup meetup
+- I have been to Rust and C++ Cardiff before, but missed last session
+- This is my first time at a Rust and C++ Cardiff meetup
+
+
+And finally just to get an idea of langage background
+
+I have a fair amount of knowledge of the following languages
+
+- C++
+- C
+- Python
+- Java
+- C#
+- Assembly
+- Other - OO language
+- Other - scripting language
+- Other - functional language
+- None of the above - I have very limited experience in other languages
+
+
+Okay great, given those results, we'll do a very quick recap over setup instructions for anyone who wasn't here last week.
+
+I've then got some slides summarizing the content covered in chapters 3 and 4. Not all chapters will lend themselves well to this slide treatment but I thought they could be helpful discussion points for these particular chapters which cover a lot of the bread and butter stuff of Rust and are worth getting familiar with.
+
+We'll have points to discuss throughout I hope. My current plan is to keep discussion to the specific topics initially so we can get everyone onto the same page, and then at the end have more freeform chat about anything Rust related!
+
+
+- Check whether you can desconstruct tuples into existing variables?
+
+
+
+
+
